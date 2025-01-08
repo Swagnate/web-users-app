@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <h1>Пользователи</h1>
+    <form method="post" action="/users">
+        <input type="text" name="name" placeholder="Имя пользователя" required />
+        <button type="submit">Создать</button>
+    </form>
+    <ul>
+        <% if (users && users.length) { %>
+            <% users.forEach(user=> { %>
+                <li>
+                    <strong>
+                        <%= user.name %>
+                    </strong> (ID: <%= user.id %>)
+                        <br />
+                        Секции:
+                        <% if (user.Sections && user.Sections.length) { %>
+                            <%= user.Sections.map(sec=> sec.title).join(', ') %>
+                                <% } else { %>
+                                    Нет секций
+                                    <% } %>
+                </li>
+                <% }) %>
+                    <% } else { %>
+                        <li>Нет пользователей</li>
+                        <% } %>
+    </ul>
+    <p><a href="/">Главная</a></p>
+</body>
+
+</html>

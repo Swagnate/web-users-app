@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Секции</title>
+</head>
+
+<body>
+    <h1>Секции</h1>
+    <form method="post" action="/sections">
+        <input type="text" placeholder="Секции" name="title">
+        <button type="submit">Создать</button>
+    </form>
+    <h1>Добавить пользователя в секции</h1>
+    <form method="post" action="/sections/add-user">
+        <div>
+            <label for="userId">userId:</label>
+            <input type="number" id="userId" name="userId">
+        </div>
+        <div>
+            <label for="sectionId">sectionId:</label>
+            <input type="number" id="sectionId" name="sectionId">
+        </div>
+        <button type="submit">Добавить</button>
+    </form>
+    <ul>
+        <% if (sections && sections.length) { %>
+            <% sections.forEach(section=> { %>
+                <li>
+                    <strong>
+                        <%= section.title %>
+                    </strong> (ID: <%= section.id %>)
+                        <br />
+                        Пользователи:
+                        <% if (section.Users && section.Users.length) { %>
+                            <%= section.Users.map(u=> u.name).join(', ') %>
+                                <% } else { %>
+                                    Нет пользователей
+                                    <% } %>
+                </li>
+                <% }) %>
+                    <% } else { %>
+                        <li>Нет секций</li>
+                        <% } %>
+    </ul>
+
+</body>
+
+</html>
