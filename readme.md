@@ -1,2 +1,3 @@
 # comand for start program 
-# npm start
+
+``` npm start ```
