@@ -1,4 +1,5 @@
 const { User, Section } = require('../models')
+
 exports.getUsers = async (req, res) => {
     try {
         const users = await User.findAll({ include: Section })
@@ -9,7 +10,6 @@ exports.getUsers = async (req, res) => {
         res.status(500).send('Ошибка при плучении списка пользователя')
     }
 }
-
 
 exports.createUser = async (req, res) => {
     try {
@@ -22,4 +22,3 @@ exports.createUser = async (req, res) => {
         res.status(500).send('Ошибка при плучении списка пользователя')
     }
 }
-
