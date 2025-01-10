@@ -12,6 +12,9 @@ const PORT = 3000 || process.env.PORT
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// Настройка для обслуживания статических файлов из папки 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Middleware для парсинга данных
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

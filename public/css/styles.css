@@ -1,0 +1,87 @@
+/* Сброс стилей по умолчанию */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для body */
+body {
+    font-family: Arial, sans-serif; /* Шрифт для всего документа */
+    line-height: 1.6; /* Высота строки для лучшей читаемости */
+    background-color: #aae4c8; /* Цвет фона */
+    color: #333; /* Цвет текста */
+    padding: 20px; /* Отступы вокруг содержимого */
+}
+
+/* Стили для заголовков */
+h1, h2, h3 {
+    color: #333; /* Цвет заголовков */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стили для форм */
+form {
+    margin-bottom: 20px; /* Отступ снизу для форм */
+    padding: 15px; /* Внутренние отступы */
+    background: #fff; /* Цвет фона формы */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для формы */
+}
+
+/* Стили для полей ввода */
+input[type="text"],
+input[type="number"] {
+    width: 100%; /* Ширина 100% */
+    padding: 10px; /* Внутренние отступы */
+    margin-bottom: 10px; /* Отступ снизу */
+    border: 1px solid #ccc; /* Цвет границы */
+    border-radius: 4px; /* Закругленные углы */
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #5cb85c; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Без границы */
+    padding: 10px 15px; /* Внутренние отступы */
+    border-radius: 4px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+button:hover {
+    background-color: #23cc1a; /* Цвет фона кнопки при наведении */
+}
+
+/* Стили для списков */
+ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+li {
+    background: #fff; /* Цвет фона элемента списка */
+    margin-bottom: 10px; /* Отступ снизу */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Тень для элемента списка */
+}
+
+/* Стили для ссылок */
+a {
+    color: #007bff; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+.head-button {
+    display: inline-block; /* Отображение как блочный элемент */
+    padding: 10px 15px; /* Внутренние отступы */
+    margin-top: 20px; /* Отступ между кнопками */
+    background-color: #1661b1; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Закругленные углы */
+}
